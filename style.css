@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+/* ### Primary
+
+Bright orange: hsl(31, 77%, 52%)
+Dark cyan: hsl(184, 100%, 22%)
+Very dark cyan: hsl(179, 100%, 13%)
+
+### Neutral
+
+Transparent white (paragraphs): hsla(0, 0%, 100%, 0.75)
+Very light gray (background, headings, buttons): hsl(0, 0%, 95%) */
+
+:root {
+    --font-lexend: 'Lexend Deca', sans-serif;
+    --font-BSD: 'Big Shoulders Display', cursive;
+
+    --prime-clr1: hsl(31, 77%, 52%);
+    --prime-clr2: hsl(184, 100%, 22%);
+    --prime-clr3: hsl(179, 100%, 13%);
+
+    --neutral-clr1: hsla(0, 0%, 100%, 0.75);
+    --neutral-clr2: hsl(0, 0%, 95%);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px 40px 20px
+}
+
+.section {
+    width: 100%;
+    padding: 50px;
+}
+
+.section h1 {
+    color: var(--neutral-clr2);
+    font-family: var(--font-BSD);
+    margin: 30px 0 30px 0;
+    text-transform: uppercase;
+    font-size: 40px;
+}
+
+.section p {
+    color: var(--neutral-clr1);
+    font-family: var(--font-lexend);
+    font-size: 15px;
+    line-height: 1.75;
+}
+
+.btn {
+    border: none;
+    padding: 15px 30px;
+    border-radius:30px;
+    margin: 40px 0 0 0;
+    border: 2px solid white;
+    transition: 0.3s ease-in-out;
+}
+
+.sedan {
+    background-color: var(--prime-clr1);
+    border-radius: 10px 10px 0 0;
+}
+
+.sedan .btn {
+    color: var(--prime-clr1);
+}
+
+.sedan .btn:hover {
+    border: 2px solid white;
+    background-color: var(--prime-clr1);
+    color: var(--neutral-clr2);
+}
+
+.suvs {
+    background-color: var(--prime-clr2);
+}
+
+.suvs .btn {
+    color: var(--prime-clr2);
+}
+
+.suvs .btn:hover {
+    border: 2px solid white;
+    background-color: var(--prime-clr2);
+    color: var(--neutral-clr2);
+}
+
+.luxury {
+    background-color: var(--prime-clr3);
+    border-radius: 0 0 10px 10px;
+}
+
+.luxury .btn {
+    color: var(--prime-clr3);
+}
+
+.luxury .btn:hover {
+    border: 2px solid white;
+    background-color: var(--prime-clr3);
+    color: var(--neutral-clr2);
+}
+
+@media (min-width: 500px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 8vh;
+    }
+    main {
+        flex-direction: row;
+        max-width: 1000px;
+        min-width: 800px;
+    }
+    .section {
+        max-height: 80%;
+    }
+    .sedan {
+        border-radius: 10px 0 0 10px;
+    }
+    .luxury {
+        border-radius: 0 10px 10px 0;
+    }
+    
+}
